@@ -1,0 +1,76 @@
+//
+//  EyeSight-Prefix.pch
+//  EnSight
+//
+//  Created by Hollie Bradley on 10/15/15.
+//  Copyright © 2015 Hollie Bradley. All rights reserved.
+//
+
+#ifndef EyeSight_Prefix_pch
+#define EyeSight_Prefix_pch
+#endif /* EyeSight_Prefix_pch */
+
+#define iOS8AndLater ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
+
+
+#define AndyColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define AndyNavigationBarTintColor AndyColor(255, 255, 255, 0.85)
+
+#define AndyVideoListBaseModelTitleFont [UIFont fontWithName:@"Helvetica-Bold" size:15]
+#define AndyVideoListBaseModelCategoryAndDurationFont [UIFont systemFontOfSize:12]
+#define AndyCategoryNameFont [UIFont fontWithName:@"Helvetica-Bold" size:15]
+#define AndyMainScreenSize [UIScreen mainScreen].bounds.size
+
+#define AndyVideoDetailViewTitleFont [UIFont fontWithName:@"Helvetica-Bold" size:16]
+#define AndyVideoDetailViewCategoryAndDurationFont [UIFont systemFontOfSize:13]
+#define AndyVideoDetailViewDescriptionFont [UIFont systemFontOfSize:13]
+
+#define LoadingInfo @"Is loading..."
+#define LoadingError @"There was an error loading process. Please try again."
+#define NetworkOfflineAndCacheIsNull @"No network connection, and no local cache"
+#define NetWorkOffline @"The network is disconnected, please check your network connection"
+
+#define DailyCacheFileName @"Daily.txt"
+#define PastCategoryCacheFileName @"PastCategory.txt"
+#define RankWeekCacheFileName @"RankWeek.txt"
+#define RankMonthCacheFileName @"RankMonth.txt"
+#define RankAllCacheFileName @"RankAll.txt"
+
+
+#define XAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+#define SettingWiFiKey @"SettingWiFiKey"
+#define SettingWiFiIsDownloadKey @"SettingWiFiIsDownloadKey"
+#define SettingWiFiIsPlayKey @"SettingWiFiIsPlayKey"
+#define SettingDownloadKey @"SettingDownloadKey"
+#define SettingFavoriteKey @"SettingFavoriteKey"
+#define SettingIsVideoAutoBack @"SettingIsVideoAutoBack"
+#define SettingDoubleTapKey @"SettingDoubleTapKey"
+
+#define CampaignIsAvailableKey @"CampaignIsAvailableKey"
+#define CampaignImageUrlKey @"CampaignImageUrlKey"
+#define CampaignActionUrlKey @"CampaignActionUrlKey"
+
+#define SplashScreenImageDateKey @"SplashScreenImageDateKey"
+
+#ifdef DEBUG
+#define AndyLog(...) NSLog(__VA_ARGS__)
+#else
+#define AndyLog(...)
+#endif
+
+#ifdef __OBJC__
+
+#import "AndyHttpTool.h"
+#import "AndyCommonFunction.h"
+#import "AndyFMDBTool.h"
+#import "AndyDownloadTool.h"
+#import "AppDelegate.h"
+
+#import "WeiboSDK.h"
+#import "ShareConst.h"
+
+#endif
+
+
+
